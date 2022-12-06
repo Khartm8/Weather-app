@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap");
+:root {
+  --primary: #475a7d;
+  --gray: #a6acaf;
+  --text: rgba(0, 0, 0, .8);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--primary);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--text);
+}
+h1,
+h2 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+button {
+  background: none;
+  border: 0;
+  font-family: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+input[type="text"] {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 350px;
+  min-width: 200px;
+  margin: 100px auto;
+  padding: 1em;
+  background: white;
+}
+.title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--primary);
+  margin-bottom: 1em;
+}
+.location {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 100%;
+}
+.location input {
+  padding: 7px 10px;
+  width: calc(100% - 25px);
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: #475a7d15;
+  transition: all 100ms ease;
+}
+.location input::placeholder {
+  color: var(--gray);
+}
+.location input:focus {
+  border: 1px solid var(--primary);
+}
+.get-location {
+  font-size: 20px;
+  margin-left: 0.5em;
+  color: var(--gray);
+}
+.fa-location-dot {
+  transition: color 150ms ease-in-out;
+}
+.get-location:hover i, .get-location:focus i, .get-location:active i {
+  color: var(--primary);
+}
+/* weather block */
+.weather {
+  display: none;
+  padding-top: 1em;
+}
+.weather-active {
+  display: block;
+}
+.message {
+  display: none;
+  width: calc(100% - 25px);
+  margin-top: 10px;
+  padding: .5em;
+  border-radius: 5px;
+}
+.message-active {
+  display: block;
+  font-style: italic;
+}
+.temp {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.city {
+  font-size: 1.25em;
+  line-height: 1.5;
+}
+.temp-info {
+  display: flex;
+  align-items: center;
+}
+.temp-info p {
+  font-size: 1.5em;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1.75;
+  font-weight: 500;
+}
+.detail-value {
+  font-weight: 400;
+}

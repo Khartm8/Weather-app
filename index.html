@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Weather App</h1>
+      <div class="location">
+        <input type="text" placeholder="Enter city name" />
+        <button class="get-location" title="Get your location">
+          <i class="fa-solid fa-location-dot"></i>
+        </button>
+      </div>
+      <div class="message"></div>
+      <div class="weather">
+        <div class="temp">
+          <h2 class="city"></h2>
+          <div class="temp-info">
+            <img src="" alt="" width="50" height="50" class="temp-icon">
+            <p></p>
+          </div>
+          <p class="temp-description"></p>
+        </div>
+        <div class="details">
+          <p class="detail humidity">
+            Humidity: 
+            <span class="detail-value"></span>
+          </p>
+          <p class="detail wind">
+            Wind: 
+            <span class="detail-value"></span>
+          </p>
+          <p class="detail feels-like">
+            Feels like: 
+            <span class="detail-value"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
