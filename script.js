@@ -18,16 +18,29 @@ let weather = {
     .finally(() => {});
   },
   displayWeather: function(data) {
-    const {name} = data;
+    const {name, dt, timezone} = data;
     const {country} = data.sys;
     const {temp, feels_like, humidity} = data.main;
     const {description, icon} = data.weather[0];
     const {speed} = data.wind;
 
+    function editTime(time) {
+      let hours = time.getUTCHours();
+      let minutes = time.getUTCMinutes();
+      if(hours.toString().length < 2) {
+        hours = '0' + hours;
+      }
+      if(minutes.toString().length < 2) {
+        minutes = '0' + minutes;
+      }
+      return `${hours}:${minutes}`
+    }
+
     document.querySelector('.city').innerHTML = `${name}, ${country}`;
     document.querySelector('.temp-info img').src = `http://openweathermap.org/img/wn/${icon}.png`;
     document.querySelector('.temp-info p').innerHTML = `${Math.round(temp)} °C`;
     document.querySelector('.temp-description').innerHTML = description;
+    document.querySelector('.local-time span').innerHTML = `${editTime(new Date((dt + timezone) * 1000))}`;
     document.querySelector('.humidity span').innerHTML = `${humidity} %`;
     document.querySelector('.wind span').innerHTML = `${speed} m/s`;
     document.querySelector('.feels-like span').innerHTML = `${Math.round(feels_like)} °C`;
@@ -63,3 +76,5 @@ let weather = {
 }
 weather.searchCity();
 weather.getPosition();
+
+console.log(new Date(1670863736 * 1000));
