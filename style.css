@@ -114,11 +114,18 @@ input[type="text"] {
 .temp-info {
   display: flex;
   align-items: center;
+  margin-bottom: 5px;
 }
 .temp-info p {
   font-size: 1.5em;
   line-height: 1.5;
   font-weight: 500;
+}
+.temp-description {
+  margin-bottom: 10px;
+}
+.local-time {
+  font-size: .85em;
 }
 .detail {
   display: flex;
