@@ -130,10 +130,17 @@ input[type="text"] {
 .detail {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   line-height: 1.75;
   font-weight: 500;
 }
 .detail-value {
   font-weight: 400;
+  margin-left: auto;
+}
+.wind-direction {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.wind-description {
+  font-size: .8em;
 }
