@@ -116,6 +116,9 @@ input[type="text"] {
   align-items: center;
   margin-bottom: 5px;
 }
+.temp-info img {
+  margin-right: 5px;
+}
 .temp-info p {
   font-size: 1.5em;
   line-height: 1.5;
